@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::any('/{any}', function (Request $request, $any) {
     // Base URL Lumen (ganti sesuai IP lokal Lumen kamu)
-    $lumenBaseUrl = 'https://hitalent-v3-api.kreasi.dev';
+    $lumenBaseUrl = env('LUMEN_API');
 
     // Bangun URL target ke Lumen
     $url = rtrim($lumenBaseUrl, '/') . '/' . $any;
