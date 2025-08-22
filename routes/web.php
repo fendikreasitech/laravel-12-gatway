@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
+// ===== Tambahkan fallback untuk Vue Router =====
+Route::get('/{any}', function () {
     return view('welcome');
-});
+})->where('any', '.*');
